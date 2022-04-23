@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bored?</title>
+
+</head>
+<body>
+
+  <h1><a href="./">.</a> / Something To Do</h1>
+  <p id="bored_result"></p>
+  <button onclick="bored_click()" type="button">Something Else</button>
+
+
+<script>
+
+
+  // https://www.boredapi.com
+  function bored_click() {
+    fetch('https://www.boredapi.com/api/activity/')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("bored_result").innerHTML = `
+          <strong>${data.activity}</strong> // ${data.type}
+        `;
+      });
+  }
+
+  window.onload = () => bored_click();
+</script>
+
+</body>
+</html>
