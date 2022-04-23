@@ -28,55 +28,53 @@
 
   <h1><a href="./">.</a> / Links</h1>
 
-  <div class="row">
+  <div id="content"></div>
 
-    <div class="column">
-      <h2>Email</h2>
-      <ul>
-        <li><a href="#">asdf</a></li>
-      </ul>
-    </div>
 
-    <div class="column">
-      <h2>News</h2>
-      <ul>
-        <li><a href="#">asdf</a></li>
-      </ul>
-    </div>
+  <script>
 
-    <div class="column">
-      <h2>Entertainment</h2>
-      <ul>
-        <li><a href="#">asdf</a></li>
-      </ul>
-    </div>
+    function get_data() {
+      fetch("resources/links.json")
+      .then(response => response.json())
+      .then(json => load_links(json));
+    }
 
-  </div>
+    function load_links(data) {
+      var page_content = "";
+      data.groups.forEach((e,i) => {
+        // Every 3rd group, start a row
+        if ((i % 3) == 0) {
+          page_content = `${page_content}<div class="row">`;
+        }
 
-  <div class="row">
+        page_content = `${page_content}
+        <div class="column">
+          <h2>${e.title}</h2>
+            <ul>`;
 
-    <div class="column">
-      <h2>Development</h2>
-      <ul>
-        <li><a href="#">asdf</a></li>
-      </ul>
-    </div>
+        e.links.forEach(f => {
+          page_content = `${page_content}
+            <li><a href="${f.url}">${f.name}</a></li>
+          `;
+        });
 
-    <div class="column">
-      <h2>Education</h2>
-      <ul>
-        <li><a href="#">asdf</a></li>
-      </ul>
-    </div>
+        page_content = `${page_content}
+            </ul>
+          </div>
+        `;
 
-    <div class="column">
-      <h2>Things To Do</h2>
-      <ul>
-        <li><a href="#">asdf</a></li>
-      </ul>
-    </div>
+        if ((i % 3) == 2) {
+          page_content = `${page_content}</div>`;
+        }
 
-  </div>
+      });
+
+      document.getElementById("content").innerHTML = page_content;
+      console.log(page_content);
+    }
+
+    window.onload = () => get_data();
+  </script>
 
 </body>
 </html>
