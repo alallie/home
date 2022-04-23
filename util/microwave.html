@@ -2,6 +2,17 @@
 <html>
 <head>
   <title>Microwave Calculator</title>
+
+  <style>
+    @media (max-width: 500px) {
+      form,
+      input,
+      select {
+        font-size: 1.5rem;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -39,7 +50,7 @@
     <input type="number" id="minutes" name="minutes" pattern="[0-9]*" autofocus>
 
     <label for="seconds">Seconds:</label>
-    <input type="number" id="seconds" name="seconds" pattern="[0-9]*" value="0">
+    <input type="number" id="seconds" name="seconds" pattern="[0-9]*">
 
   </form>
 
@@ -59,8 +70,8 @@
   function calculate() {
       const from = parseInt(document.getElementById("from").value);
       const to = parseInt(document.getElementById("to").value);
-      const minutes = parseInt(document.getElementById("minutes").value);
-      const seconds = parseInt(document.getElementById("seconds").value);
+      const minutes = parseInt(document.getElementById("minutes").value) || 0;
+      const seconds = parseInt(document.getElementById("seconds").value) || 0;
 
       const total_seconds = (minutes * 60) + seconds;
       const new_total_seconds = total_seconds * (from/to);
