@@ -27,11 +27,19 @@
 <body>
 
   <h1><a href="./">.</a> / Links</h1>
+  <form onsubmit="search();return false;">
+    <input type="search" placeholder="Search Web" id="search_term" autofocus />
+  </form>
 
   <div id="content"></div>
 
 
   <script>
+
+    function search() {
+        const query = document.getElementById("search_term").value;
+        window.location.href = `https://neeva.com/search?q=${query}`;
+    }
 
     function get_data() {
       fetch("resources/links.json")
