@@ -7,8 +7,18 @@
   <style>
     form  { display: table;      }
     p     { display: table-row;  }
-    label { display: table-cell; }
-    input { display: table-cell; }
+
+    .left_col {
+      display: table-cell;
+      padding-right: 2rem;
+    }
+    .right_col {
+      display: table-cell;
+    }
+
+    .time {
+      padding-left: .5rem;
+    }
   </style>
 </head>
 <body>
@@ -17,8 +27,8 @@
 
   <form oninput="calculate();">
     <p>
-      <label for="from">From:</label>
-      <select id="from" name="from">
+      <label class="left_col" for="from">From:</label>
+      <select class="right_col" id="from" name="from">
         <option value="500">500</option>
         <option value="600">600</option>
         <option value="700">700</option>
@@ -31,8 +41,8 @@
     </p>
 
     <p>
-      <label for="to">To:</label>
-      <select id="to" name="to">
+      <label class="left_col" for="to">To:</label>
+      <select class="right_col" id="to" name="to">
         <option value="500">500</option>
         <option value="600">600</option>
         <option value="700">700</option>
@@ -45,13 +55,8 @@
     </p>
 
     <p>
-      <label for="minutes">Minutes:</label>
-      <input type="number" id="minutes" name="minutes" pattern="[0-9]*">
-    </p>
-
-    <p>
-    <label for="seconds">Seconds:</label>
-    <input type="number" id="seconds" name="seconds" pattern="[0-9]*">
+      <div class="left_col"><input type="range" id="time" name="time" min="0" max="900" step="15" value="180"></div>
+      <label class="right_col time" id="setting" for="time"></label>
     </p>
 
   </form>
@@ -72,16 +77,18 @@
   function calculate() {
       const from = parseInt(document.getElementById("from").value);
       const to = parseInt(document.getElementById("to").value);
-      const minutes = parseInt(document.getElementById("minutes").value) || 0;
-      const seconds = parseInt(document.getElementById("seconds").value) || 0;
+      const total_seconds = parseInt(document.getElementById("time").value);
 
-      const total_seconds = (minutes * 60) + seconds;
       const new_total_seconds = total_seconds * (from/to);
 
+      setting
+      document.getElementById("setting").innerHTML = `${secondsToTime(total_seconds)}`;
       document.getElementById("result").innerHTML = `
       Set it for <strong>${secondsToTime(new_total_seconds)}</strong>.
       `;
   }
+
+  window.onload = () => calculate();
 </script>
 
 </body>
