@@ -114,6 +114,7 @@
     function loader() {
         get_json("main", load_links);
         get_json("files", load_file_list);
+        insert_date();
     }
 
     window.onload = () => loader();
