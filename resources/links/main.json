@@ -52,6 +52,10 @@
         {
           "name": "W3Schools",
           "url": "https://www.w3schools.com"
+        },
+        {
+          "name": "Bookmarkleter",
+          "url": "https://chriszarate.github.io/bookmarkleter/"
         }
       ]
     },
@@ -78,6 +82,15 @@
         {
           "name": "All Sides",
           "url": "https://www.allsides.com/unbiased-balanced-news"
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "links": [
+        {
+          "name": "AI Image Enlarger",
+          "url": "https://bigjpg.com"
         }
       ]
     }
