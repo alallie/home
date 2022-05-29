@@ -86,6 +86,27 @@
       ]
     },
     {
+      "title": "Utilities",
+      "links": [
+        {
+          "name": "Convert Base64",
+          "url": "base64.html"
+        },
+        {
+          "name": "Bored?",
+          "url": "bored.html"
+        },
+        {
+          "name": "Microwave Calculator",
+          "url": "microwave.html"
+        },
+        {
+          "name": "Password Generator",
+          "url": "password.html"
+        }
+      ]
+    },
+    {
       "title": "Other",
       "links": [
         {
