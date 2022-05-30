@@ -25,16 +25,12 @@
           "url": "https://youtube.com"
         },
         {
-          "name": "Reddit",
-          "url": "https://www.youtube.com/watch?v=Ow0lr63y4Mw&t=154s"
-        },
-        {
           "name": "Apple Music",
           "url": "https://music.apple.com/"
         },
         {
-          "name": "Guitar Tab",
-          "url": "https://www.songsterr.com"
+          "name": "Reddit",
+          "url": "https://www.youtube.com/watch?v=Ow0lr63y4Mw&t=154s"
         }
       ]
     },
@@ -65,6 +61,10 @@
         {
           "name": "Draw a Box",
           "url": "https://drawabox.com"
+        },
+        {
+          "name": "Guitar Tab",
+          "url": "https://www.songsterr.com"
         }
       ]
     },
@@ -139,6 +139,10 @@
     {
       "title": "Other",
       "links": [
+        {
+          "name": "Dark Sky",
+          "url": "https://darksky.net/forecast/42.4886,-83.143/us12/en"
+        },
         {
           "name": "AI Image Enlarger",
           "url": "https://bigjpg.com"
