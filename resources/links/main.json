@@ -39,6 +39,36 @@
       ]
     },
     {
+      "title": "Go Places",
+      "links": [
+        {
+          "name": "Google Maps",
+          "url": "https://www.google.com/maps"
+        },
+        {
+          "name": "Google Flights",
+          "url": "https://www.google.com/travel/flights"
+        },
+        {
+          "name": "Ticketmaster",
+          "url": "https://www.ticketmaster.com"
+        },
+        {
+          "name": "Atlas Obscura",
+          "url": "https://www.atlasobscura.com"
+        }
+      ]
+    },
+    {
+      "title": "Hobbies",
+      "links": [
+        {
+          "name": "Draw a Box",
+          "url": "https://drawabox.com"
+        }
+      ]
+    },
+    {
       "title": "Development",
       "links": [
         {
