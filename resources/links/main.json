@@ -112,6 +112,10 @@
         {
           "name": "All Sides",
           "url": "https://www.allsides.com/unbiased-balanced-news"
+        },
+        {
+          "name": "Hacker News",
+          "url": "https://news.ycombinator.com"
         }
       ]
     },
