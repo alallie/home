@@ -2,9 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Links</title>
-
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/thai-font" type="text/css"/>
 
   <style>
@@ -68,7 +66,6 @@
 
   <div id="content"></div>
 
-
   <script>
 
     function search() {
@@ -96,7 +93,6 @@
         const selection = document.getElementById("link_picker").value;
         get_json(selection.split(".")[0], load_links);
     }
-
 
     function load_links(data) {
       var page_content = "";
