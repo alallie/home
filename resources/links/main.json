@@ -127,12 +127,16 @@
       "title": "Utilities",
       "links": [
         {
+          "name": "Bored?",
+          "url": "bored.html"
+        },
+        {
           "name": "Convert Base64",
           "url": "base64.html"
         },
         {
-          "name": "Bored?",
-          "url": "bored.html"
+          "name": "Epoch Time",
+          "url": "epoch.html"
         },
         {
           "name": "Microwave Calculator",
