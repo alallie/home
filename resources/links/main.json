@@ -127,6 +127,10 @@
       "title": "Utilities",
       "links": [
         {
+          "name": "BMI",
+          "url": "bmi.html"
+        },
+        {
           "name": "Bored?",
           "url": "bored.html"
         },
